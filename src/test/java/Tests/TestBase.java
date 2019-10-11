@@ -1,12 +1,13 @@
 package Tests;
+import Data.Global;
 import Pages.*;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 
-public class TestBase {
+public class TestBase extends PageController {
 
-    PageController page = new PageController();
+
 
     @Before
     public void setup()
@@ -17,7 +18,7 @@ public class TestBase {
     @After
     public void close()
     {
-        page.Driver.close();
+        Driver.close();
     }
 
 

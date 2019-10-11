@@ -7,8 +7,6 @@ public class GoogleHomePage extends BasePage{
 
     WebDriver driver;
 
-    WebElement thisElement;
-
     public GoogleHomePage(WebDriver Driver)
     {
         super(Driver);
@@ -17,20 +15,17 @@ public class GoogleHomePage extends BasePage{
 
     public void clickSearchBar() throws Exception
     {
-        thisElement = findElementByXPath("//*[@id='searchform']//input[@maxlength='2048']");
-        thisElement.click();
+        fluentClickXPath("//*[@id='searchform']//input[@maxlength='2048']");
     }
 
     public void addSearchBar(String search) throws Exception
     {
-        thisElement = findElementByXPath("//*[@id='searchform']//input[@maxlength='2048']");
-        thisElement.sendKeys(search);
+        fluentSendTextXPath("//*[@id='searchform']//input[@maxlength='2048']", search);
     }
 
     public void clickSearch() throws Exception
     {
-        thisElement = findElementByXPath("(//input)[7]");
-        thisElement.click();
+        fluentClickXPath("(//input)[7]");
     }
 
 }
