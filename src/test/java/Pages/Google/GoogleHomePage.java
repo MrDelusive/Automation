@@ -1,9 +1,9 @@
-package Pages;
+package Pages.Google;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import Pages.BasePage;
+import org.openqa.selenium.*;
 
-public class GoogleHomePage extends BasePage{
+public class GoogleHomePage extends BasePage {
 
     WebDriver driver;
 

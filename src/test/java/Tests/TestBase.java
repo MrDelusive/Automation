@@ -1,9 +1,7 @@
 package Tests;
-import Data.Global;
+
 import Pages.*;
-import org.junit.After;
-import org.junit.Before;
-import org.openqa.selenium.WebDriver;
+import org.junit.*;
 
 public class TestBase extends PageController {
 
@@ -16,8 +14,9 @@ public class TestBase extends PageController {
     }
 
     @After
-    public void close()
+    public void close() throws Exception
     {
+        file.writeToFile(path,testCase,testPass,additionalData);
         Driver.close();
     }
 
