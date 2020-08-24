@@ -18,6 +18,7 @@ public class TestBase extends PageController {
     {
         file.writeToFile(path,testCase,testPass,additionalData);
         Driver.close();
+        Driver.quit();
     }
 
 

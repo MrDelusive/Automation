@@ -118,4 +118,9 @@ public class BasePage {
             throw new Exception("Cannot send text at XPath: " + XPath);
         }
     }
+
+    public void navigateTo(String url) throws Exception
+    {
+        driver.navigate().to(url);
+    }
 }
