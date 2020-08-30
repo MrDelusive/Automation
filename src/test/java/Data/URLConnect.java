@@ -35,6 +35,13 @@ public class URLConnect {
                 System.out.println("Could not login to the server");
                 throw new Exception("Connection Failed");
             }
+            else
+            {
+                System.out.println("LOGGED IN SERVER");
+                ftpClient.enterLocalPassiveMode();
+                ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
+
+            }
         } catch (IOException ex) {
             System.out.println("Oops! Something wrong happened");
             throw new Exception(ex);
@@ -43,9 +50,7 @@ public class URLConnect {
 
     public void getFile(FTPClient ftpClient, String fileName) throws Exception
     {
-        System.out.println("LOGGED IN SERVER");
-        ftpClient.enterLocalPassiveMode();
-        ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
+
 
         String remoteFile1 = "/anon/gen/fwo/" + fileName;
         File downloadFile1 = new File("M:/Downloads and Files/Automation/Results/" + fileName);
