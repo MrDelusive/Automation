@@ -13,4 +13,12 @@ public class FileHandle {
         writer.close();
     }
 
+    public void writeToFilePlain(String path, String fileName, String data) throws Exception
+    {
+        BufferedWriter writer = new BufferedWriter(new FileWriter(path + fileName, true));
+        writer.write(data);
+
+        writer.close();
+    }
+
 }

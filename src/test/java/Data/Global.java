@@ -5,6 +5,8 @@ import Pages.PageController;
 public class Global {
 
     public FileHandle file = new FileHandle();
+    public URLConnect urlConnect = new URLConnect();
+
     //public PageController page = new PageController();
     public String url = "https://www.google.com";
     public String path = "M:/Downloads and Files/Automation/Results/";
